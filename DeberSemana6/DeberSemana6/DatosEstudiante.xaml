@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeberSemana6.DatosEstudiante">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame  BackgroundColor="LightSeaGreen" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView WidthRequest="1" BackgroundColor="White" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.Column="0" />
+                    <BoxView WidthRequest="1" BackgroundColor="White" HorizontalOptions="EndAndExpand" VerticalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1" />
+
+                    <Label Text="Codigo" HorizontalTextAlignment="Center" FontSize="Subtitle" Grid.Row="0" Grid.Column="0" />
+                    <Label Text="Nombre" HorizontalTextAlignment="Center" FontSize="Subtitle" Grid.Row="0" Grid.Column="1" />
+                    <Label Text="Dosis" HorizontalTextAlignment="Center" FontSize="Subtitle" Grid.Row="0" Grid.Column="2" />
+                    <Label Text="Lote" HorizontalTextAlignment="Center" FontSize="Subtitle" Grid.Row="0" Grid.Column="3" />
+
+                </Grid>
+            </Frame>
+
+            <ListView x:Name="MyListView" SeparatorColor="LightSeaGreen" SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Actualizar" CommandParameter="{Binding .}" Clicked="MenuItem_Actualizar" />
+                                <MenuItem Text="Eliminar" CommandParameter="{Binding .}" Clicked="MenuItem_Eliminar"  />
+                            </ViewCell.ContextActions>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label x:Name="lblCodigo" Text="{Binding codigo}" Grid.Column="0" HorizontalTextAlignment="Center" />
+                                    <Label x:Name="lblNombre" Text="{Binding nombre}" Grid.Column="1" HorizontalTextAlignment="Center" />
+                                    <Label x:Name="lblApellido" Text="{Binding apellido}" Grid.Column="2" HorizontalTextAlignment="Center" />
+                                    <Label x:Name="lblEdad" Text="{Binding edad}" Grid.Column="3" HorizontalTextAlignment="Center" />
+
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+            <Button x:Name="btnInsertar" Text="Insertar" Clicked="btnInsertar_Clicked" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

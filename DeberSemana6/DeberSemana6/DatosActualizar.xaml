@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeberSemana6.DatosActualizar">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Actualizar Datos Estudiante" FontSize="20" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+            <Image Source="vacuna.png" HorizontalOptions="Center" WidthRequest="80" HeightRequest="80" />
+
+            <Label x:Name="lblCodigo" HorizontalTextAlignment="Center" FontSize="20"/>
+
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre" HorizontalTextAlignment="Center" />
+            <Entry x:Name="txtApellido" Placeholder="Ingrese el apellido"  HorizontalTextAlignment="Center" />
+            <Entry x:Name="txtEdad" Placeholder="Ingrese la edad" Keyboard="Numeric" HorizontalTextAlignment="Center" />
+
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

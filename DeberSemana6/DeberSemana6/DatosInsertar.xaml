@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeberSemana6.DatosInsertar">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Ingresar nuevo estudiante" FontSize="20" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+            <Image Source="vacuna.png" HorizontalOptions="Center" WidthRequest="80" HeightRequest="80" />
+
+            <Label Text="" />
+
+            <Entry x:Name="txtCodigo" Placeholder="Ingrese el codigo" Keyboard="Numeric" HorizontalTextAlignment="Center" />
+            <Entry x:Name="txtNombre" Placeholder="Ingrese el nombre" HorizontalTextAlignment="Center" />
+            <Entry x:Name="txtapellido" Placeholder="Ingrese el apellido"  HorizontalTextAlignment="Center" />
+            <Entry x:Name="txtedad" Placeholder="Ingrese la edad" Keyboard="Numeric" HorizontalTextAlignment="Center" />
+
+            <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
